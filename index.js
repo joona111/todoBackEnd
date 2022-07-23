@@ -9,7 +9,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 
 const password = process.env.password;
-const url = `mongodb+srv://joona:${password}@cluster0.zdwny.mongodb.net/?retryWrites=true&w=majority`;
+const url = `mongodb+srv://joona:koira123@cluster0.zdwny.mongodb.net/?retryWrites=true&w=majority`;
 mongoose.connect(url);
 
 app.use(cors());
