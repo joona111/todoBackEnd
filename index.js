@@ -7,7 +7,6 @@ const app = express();
 require("dotenv").config();
 
 const mongoose = require("mongoose");
-const { default: Category } = require("../todoFront/src/Category");
 
 const password = process.env.password;
 const url = `mongodb+srv://joona:koira123@cluster0.zdwny.mongodb.net/?retryWrites=true&w=majority`;
@@ -52,8 +51,6 @@ app.post("/api/newcategory", (req, res) => {
 
   res.sendStatus(200);
 });
-
-
 
 app.delete("/api/deletetodo/:id", (req, res) => {
   Todo.findByIdAndRemove(req.params.id, (err, res) => {
