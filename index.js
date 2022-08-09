@@ -53,12 +53,7 @@ app.post("/api/newcategory", (req, res) => {
   res.sendStatus(200);
 });
 
-app.delete("/api/deletecategorybyname/:name", (req, res) => {
-  Category.delete({ name: req.params.name }).then((result) => {
-    console.log(result);
-  });
-  res.sendStatus(200);
-});
+
 
 app.delete("/api/deletetodo/:id", (req, res) => {
   Todo.findByIdAndRemove(req.params.id, (err, res) => {
